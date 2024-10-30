@@ -22,5 +22,5 @@ def main():
 		print('the file', userfilename)
 
 #call the main function
-if _ _name_ _ == '_ _main_ _':
-main()
+if __name__ == '__main__':
+	main()
