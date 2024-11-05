@@ -1,8 +1,3 @@
-# Program #1: Item Counter
-# Assume a file containing a series of names (as strings) is named names.txt 
-# (Use the included example file names.txt) and exists on the computer's disk.
-# Write a program that displays the number of names that are stored in the file.
-
 #1: Item Counter
 
 #Assume a file containing a series of names (as strings) is named names.txt and exists on the computer's disk.  
@@ -12,27 +7,27 @@
 
 #open names.txt file in read mode
 namefile = open("names.txt", "r")
-name = namefile.readline()
+name = "name"
+
+#set count at 0
+count = 0
 
 #loop through all records in file
 #while record is not equal to blank string
-while name != ' ':
-	#set count at 0
-	count = 0
+while name != '':
 	#see what name the program is on
-	print(namefile.readline())
+	name = namefile.readline()
 	#see what number the program is on
 	print(f"{name} is number {count}")
 	#add to count
-	total_count = count + 1
+	count += 1
 
-#continue to read
-name = author_readline()
-#in read mode
-name = name.rstrip('')
+#accounting for adding one extra count in while loop
+count -= 1
 
+#display total
 if name == '':
-	print(f"total: {total_count}")
+	print(f"total: {count}")
 
 #close	
 namefile.close()
